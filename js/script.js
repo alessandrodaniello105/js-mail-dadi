@@ -39,4 +39,31 @@ console.log('-------- DIVISIONE DA RIMUOVERE --------')
 /****************
   GIOCO DADI
 ****************/
+// 1. Creo due variabili per il numero estratto dai due giocatori (numPlayer, numPC), e una per il messaggio
+let numPC, numUser, messageDices;
 
+// 2. Creo un bottone che sarà la mia funzione di generazione numero
+const buttonDices = document.getElementById('button-dices');
+buttonDices.addEventListener('click', function(){
+
+  numPC = Math.ceil(Math.random() * 6 );
+  console.log(numPC);
+
+  numUser = Math.ceil(Math.random() * 6 );
+  console.log(numUser);
+
+  document.getElementById('output-dices-message').innerHTML = `
+  Il computer ha tirato ${numPC}, tu hai tirato ${numUser}, quindi il vincitore è ...
+  `;
+
+});
+
+
+// 3. Creo la funzione di generazione random da 1 a 6
+
+// 4. Definisco la funzione nella variabile dei numeri estratti dai due giocatori
+
+// 5. Verifico i due numeri estratti
+if (numPC = numUser) {
+
+}
