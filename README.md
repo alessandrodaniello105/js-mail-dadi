@@ -1,7 +1,7 @@
 Controllo Mail e Gioco dei Dadi
 ===
 
-Controllo Mail:
+## Controllo Mail:
 1. Creo un array(lista) delle email registrate
 1. Creo un input dove chiedo la mail dell'utente e la definisco in una variabile
 1. Creo una variabile per il successivo messaggio di esito
@@ -9,7 +9,7 @@ Controllo Mail:
 1. Se non è presente: non lo lascio entrare e stampo il relativo messaggio
 1. Se è presente: lo lascio entrare e stampo il relativo messaggio
 
-Gioco dei Dadi:
+## Gioco dei Dadi:
 1. Creo due variabili per il numero estratto dai due giocatori (numPlayer, numPC)
 1. Creo un bottone che sarà la mia funzione di generazione numero
 1. Creo la funzione di generazione random da 1 a 6
