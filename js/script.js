@@ -40,30 +40,41 @@ console.log('-------- DIVISIONE DA RIMUOVERE --------')
   GIOCO DADI
 ****************/
 // 1. Creo due variabili per il numero estratto dai due giocatori (numPlayer, numPC), e una per il messaggio
-let numPC, numUser, messageDices;
+let numPC, numUser, messageWinnerDices;
+const outputDices = document.getElementById('output-dices-message');
 
 // 2. Creo un bottone che sarà la mia funzione di generazione numero
 const buttonDices = document.getElementById('button-dices');
-buttonDices.addEventListener('click', function(){
 
+// 3. Creo la funzione di generazione random da 1 a 6
+buttonDices.addEventListener('click', function(){
   numPC = Math.ceil(Math.random() * 6 );
   console.log(numPC);
 
   numUser = Math.ceil(Math.random() * 6 );
   console.log(numUser);
 
-  document.getElementById('output-dices-message').innerHTML = `
-  Il computer ha tirato ${numPC}, tu hai tirato ${numUser}, quindi il vincitore è ...
+  // 5. Verifico i due numeri estratti
+  // se i numeri estratti sono uguali tira di nuovo
+  if (numPC == numUser) {
+
+    numPC = Math.ceil(Math.random() * 6 );
+
+    numUser = Math.ceil(Math.random() * 6 );
+    
+  } else if (numPC > numUser) {
+
+    messageWinnerDices = ' è il PC.';
+
+  } else {
+    messageWinnerDices = ' sei tu!'
+  }
+
+
+  outputDices.innerHTML = `
+  Il computer ha tirato ${numPC}, tu hai tirato ${numUser}, quindi il vincitore ${messageWinnerDices}
   `;
 
 });
 
-
-// 3. Creo la funzione di generazione random da 1 a 6
-
 // 4. Definisco la funzione nella variabile dei numeri estratti dai due giocatori
-
-// 5. Verifico i due numeri estratti
-if (numPC = numUser) {
-
-}
