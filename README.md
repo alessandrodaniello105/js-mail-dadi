@@ -3,8 +3,8 @@ Controllo Mail e Gioco dei Dadi
 
 ## Controllo Mail:
 1. Creo un array(lista) delle email registrate
-1. Creo un input dove chiedo la mail dell'utente e la definisco in una variabile
-1. Creo una variabile per il successivo messaggio di esito
+1. Creo un input dove chiedo la mail dell'utente
+1. Creo una variabile per l'email dell'utente e una per il successivo messaggio di esito
 1. Verifico se l'email inserita dall'utente è presente nella lista delle email registate
 1. Se non è presente: non lo lascio entrare e stampo il relativo messaggio
 1. Se è presente: lo lascio entrare e stampo il relativo messaggio
