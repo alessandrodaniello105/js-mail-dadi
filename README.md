@@ -13,7 +13,6 @@ Controllo Mail e Gioco dei Dadi
 1. Creo due variabili per il numero estratto dai due giocatori (numPlayer, numPC)
 1. Creo un bottone che sarà la mia funzione di generazione numero
 1. Creo la funzione di generazione random da 1 a 6
-1. Definisco la funzione nella variabile dei numeri estratti dai due giocatori
 1. Verifico i due numeri estratti
 1. Se sono uguali, ritira
 1. Se uno è maggiore dell'altro, stampa il nome del vincitore

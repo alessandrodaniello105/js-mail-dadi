@@ -49,19 +49,18 @@ const buttonDices = document.getElementById('button-dices');
 // 3. Creo la funzione di generazione random da 1 a 6
 buttonDices.addEventListener('click', function(){
   numPC = Math.ceil(Math.random() * 6 );
-  console.log(numPC);
 
   numUser = Math.ceil(Math.random() * 6 );
-  console.log(numUser);
 
-  // 5. Verifico i due numeri estratti
-  // se i numeri estratti sono uguali tira di nuovo
-  if (numPC == numUser) {
+  // 4. Verifico i due numeri estratti
+  // 5. se i numeri estratti sono uguali tira di nuovo
+  if (numPC === numUser) {
 
     numPC = Math.ceil(Math.random() * 6 );
 
     numUser = Math.ceil(Math.random() * 6 );
-    
+  
+  // 6. Se uno è maggiore dell'altro, stampa il nome del vincitore
   } else if (numPC > numUser) {
 
     messageWinnerDices = ' è il PC.';
@@ -76,5 +75,3 @@ buttonDices.addEventListener('click', function(){
   `;
 
 });
-
-// 4. Definisco la funzione nella variabile dei numeri estratti dai due giocatori
