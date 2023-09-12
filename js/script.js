@@ -22,8 +22,15 @@ const buttonMails = document.getElementById('button-emails');
 buttonMails.addEventListener('click', function(){
   
   emailUser = document.getElementById('email-user-id').value;
+  console.log(emailUser);
   
-  if (emailRegistered.includes(emailUser)) {
+  if (emailUser == "") {
+
+    //Se il campo viene lasciato vuoto, stampa un relativo messaggio
+    alert('Non lasciare il campo vuoto');
+    message = 'Non lasciare il campo vuoto';
+
+  } else if (emailRegistered.includes(emailUser.value)) {
 
     // 6. Se è presente: lo lascio entrare e stampo il relativo messaggio
     message = 'Puoi entrare';

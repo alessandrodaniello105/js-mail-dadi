@@ -15,55 +15,70 @@
 </head>
 <body>
   
-  <div class="container-ctm d-flex flex-column min-h-email shadow text-center rounded-3 mx-auto my-5 w-75 py-3 bg-secondary">
+  <div class="container-ctm d-flex flex-column">
 
-    <h1 class="fw-bold mb-3">Controllo Mail</h1>
+    <!-- ESERCIZIO EMAIL -->
+    <section class="col d-flex flex-column min-h-email shadow text-center rounded-3 mx-auto my-3 w-75 py-3 bg-secondary">
 
-    <!-- INPUT FORM -->
-    <div class="col-4 offset-4 bg-secondary-subtle rounded p-3 text-center">
-      
-      <label class="form-label fw-bold" for="email-user-id">Email:</label>
-      <input class="form-control " type="email" name="email-user" id="email-user-id" placeholder="Scrivi qui la tua e-mail">
-      
-      <button type="submit" class="btn btn-outline-primary fw-bold my-3" id="button-emails"> Submit</button>
-      
-    </div>
-    <!-- /INPUT FORM -->
-    
-    <!-- OUTPUT MESSAGE -->
-    <div class="col fw-bold fs-3 my-3" id="output-mails"></div>
-    <!-- /OUTPUT MESSAGE -->
-
-    <!-- HINT BOX -->
-    <div class="col shadow bg-white py-2" id="hint">
-      <p class="fs-6">Indizio: Clicca e trascina il cursore all'interno di questo box</p>
-      <span class="text-white">Prova ad inserire tutor@boolean.it</span>
-    </div>
-    <!-- /HINT BOX -->
-
-
-  </div>
+      <h1 class="fw-bold ">Controllo Mail</h1>
   
-  <div class="container-ctm min-h-dices bg-body-secondary shadow rounded-3 mx-auto w-75 py-3 text-center my-5">
-    
-    <h1 class="fw-bold mb-3">Gioco dei Dadi</h1>
+      <div class="email-head-text text-info-emphasis bg-info-subtle my-3 pt-3">
+        <p>Sei finalmente arrivato a quel famoso DevCon a cui volevi partecipare da tanti anni. Ti trovi in fila per il controllo dei biglietti e ti viene richiesta la tua e-mail per confermare la presenza del tuo biglietto.</p>
+        <p>Inserisci quindi la tua email nel campo sottostante</p>
+      </div>
+  
+      <!-- INPUT FORM -->
+      <div class="col-4 offset-4 bg-secondary-subtle rounded p-3 text-center">
+        
+        <label class="form-label fw-bold" for="email-user-id">Email:</label>
+        <input class="form-control" required type="email" name="email-user" id="email-user-id" placeholder="Scrivi qui la tua e-mail">
+        
+        <button type="submit" class="btn btn-outline-primary fw-bold mt-3" id="button-emails">Invia</button>
+        
+      </div>
+      <!-- /INPUT FORM -->
+      
+      <!-- OUTPUT MESSAGE -->
+      <div class="col fw-bold fs-3 my-3" id="output-mails"></div>
+      <!-- /OUTPUT MESSAGE -->
+  
+      <!-- HINT BOX -->
+      <div class="col shadow bg-white py-2" id="hint">
+        <p class="fs-6">Indizio: Clicca e trascina il cursore all'interno di questo box</p>
+        <span class="text-white">Prova ad inserire tutor@boolean.it</span>
+      </div>
+      <!-- /HINT BOX -->
+  
+    </section>
+    <!-- /ESERCIZIO EMAIL -->
 
 
-    <div class="">
-      <button class="btn btn-primary my-3" id="button-dices">Tira</button>
-      <p id="output-dices-message"></p>
-    </div>
+    <!-- ESERCIZIO DADI -->
+    <section class="col min-h-dices bg-body-secondary shadow rounded-3 mx-auto w-75 py-3 text-center my-3">
+      
+      <h1 class="fw-bold mb-3">Gioco dei Dadi</h1>
+  
+      <!-- TIRA E TESTO RISULTATO -->
+      <div>
+        <button class="btn btn-primary my-3" id="button-dices">Tira</button>
+        <p id="output-dices-message"></p>
+      </div>
+      <!-- TIRA E TESTO RISULTATO -->
+  
+      <!-- DICES -->
+      <div class="rolled-dices d-flex justify-content-center d-none">
+        <div class="dice dice-pc mx-3" id="output-pc-dice"></div>
+        <div class="dice dice-user mx-3" id="output-user-dice"></div>
+      </div>
+      <!-- /DICES -->
 
-    <!-- DICES -->
-    <div class="rolled-dices d-flex justify-content-center d-none">
-      <div class="dice dice-pc mx-3" id="output-pc-dice"></div>
-      <div class="dice dice-user mx-3" id="output-user-dice"></div>
-    </div>
-    <!-- /DICES -->
+    </section>
+    <!-- /ESERCIZIO DADI -->
+
   </div>
 
-
-
+  
   <script src="./js/script.js"></script>
+
 </body>
 </html>
