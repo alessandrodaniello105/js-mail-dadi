@@ -1,0 +1,40 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.min-h-email {
+  height: 450px;
+}
+
+.min-h-dices {
+  min-height: 300px;
+}
+
+.dice {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-size: 30px;
+  text-align: center;
+  line-height: 75px;
+  vertical-align: middle;
+}
+
+.dice.dice-pc {
+  background-color: rgb(134, 0, 0);
+  border-top-color: rgba(255, 222, 222);
+  border-left-color: rgb(163, 121, 121);
+  color: white;
+}
+
+.dice.dice-user {
+  background-color: rgb(0, 0, 134);
+  border-top-color: rgb(226, 222, 255);
+  border-left-color: rgb(127, 121, 163);
+  color: white;
+}
+
+#hint {
+  max-height: 80px;
+}

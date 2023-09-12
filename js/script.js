@@ -22,6 +22,7 @@ const buttonMails = document.getElementById('button-emails');
 buttonMails.addEventListener('click', function(){
   
   emailUser = document.getElementById('email-user-id').value;
+  
   if (emailRegistered.includes(emailUser)) {
 
     // 6. Se è presente: lo lascio entrare e stampo il relativo messaggio
@@ -56,26 +57,33 @@ buttonDices.addEventListener('click', function(){
 
   numUser = Math.ceil(Math.random() * 6 );
 
+  document.querySelector('.rolled-dices').classList.remove('d-none')
+
   // 4. Verifico i due numeri estratti
   // 5. Se i numeri estratti sono uguali tira di nuovo
   if (numPC === numUser) {
 
-    numPC = Math.ceil(Math.random() * 6 );
-
-    numUser = Math.ceil(Math.random() * 6 );
+    messageWinnerDices = 'avete pareggiato. Incredibile!';
   
   // 6. Se uno è maggiore dell'altro, stampa il nome del vincitore
   } else if (numPC > numUser) {
 
-    messageWinnerDices = ' è il PC.';
+    messageWinnerDices = 'il vincitore è il PC.';
 
   } else {
-    messageWinnerDices = ' sei tu!'
+    messageWinnerDices = 'il vincitore sei tu!';
+    
   }
 
-
+  // Stampo i messaggi nel DOM
   outputDices.innerHTML = `
-  Il computer ha tirato ${numPC}, tu hai tirato ${numUser}, quindi il vincitore ${messageWinnerDices}
+  Il computer ha tirato ${numPC}, tu hai tirato ${numUser}, quindi ${messageWinnerDices}
   `;
+
+  const outputPcDice = document.getElementById('output-pc-dice');
+  outputPcDice.innerHTML = numPC;
+
+  const outputPcUser = document.getElementById('output-user-dice');
+  outputPcUser.innerHTML = numUser;
 
 });
