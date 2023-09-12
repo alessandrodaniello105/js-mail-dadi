@@ -22,7 +22,6 @@ const buttonMails = document.getElementById('button-emails');
 buttonMails.addEventListener('click', function(){
   
   emailUser = document.getElementById('email-user-id').value;
-  console.log(emailUser);
   
   if (emailUser == "") {
 
@@ -30,7 +29,7 @@ buttonMails.addEventListener('click', function(){
     alert('Non lasciare il campo vuoto');
     message = 'Non lasciare il campo vuoto';
 
-  } else if (emailRegistered.includes(emailUser.value)) {
+  } else if (emailRegistered.includes(emailUser)) {
 
     // 6. Se è presente: lo lascio entrare e stampo il relativo messaggio
     message = 'Puoi entrare';
@@ -60,6 +59,10 @@ const buttonDices = document.getElementById('button-dices');
 
 // 3. Creo la funzione di generazione random da 1 a 6
 buttonDices.addEventListener('click', function(){
+
+  const rollingDices = new Audio('../src/audio/dice-142528.mp3');
+  rollingDices.play();
+
   numPC = Math.ceil(Math.random() * 6 );
 
   numUser = Math.ceil(Math.random() * 6 );
