@@ -22,8 +22,15 @@ const buttonMails = document.getElementById('button-emails');
 buttonMails.addEventListener('click', function(){
   
   emailUser = document.getElementById('email-user-id').value;
+
+  // Definisco il flag per la validazione dell'email inserita dall'utente
+  let emailFlag = emailUser.includes('@' + '.');
   
-  if (emailUser == "") {
+  if (!emailFlag) {
+
+    message = 'Inserisci un\'email valida';
+
+  } else if (emailUser == "") {
 
     //Se il campo viene lasciato vuoto, stampa un relativo messaggio
     alert('Non lasciare il campo vuoto');
@@ -71,6 +78,8 @@ buttonDices.addEventListener('click', function(){
 
   // 4. Verifico i due numeri estratti
   // 5. Se i numeri estratti sono uguali tira di nuovo
+  
+
   if (numPC === numUser) {
 
     messageWinnerDices = 'avete pareggiato. Incredibile!';
