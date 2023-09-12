@@ -4,6 +4,8 @@
 // 1. Creo un array(lista) delle email registrate
 
 const emailRegistered = ['tutor@boolean.it'];
+const outputMails = document.getElementById('output-mails');
+
 
 // 2. Creo un input dove chiedo la mail dell'utente
 
@@ -12,39 +14,30 @@ let emailUser, message;
 
 
 // 4. Verifico se l'email inserita dall'utente è presente nella lista delle email registate
-
 let emailVerify = false;
 
-// 4bis. Creo un pulsante che mi faccia partire la verifica
+// 5. Creo un pulsante che mi faccia partire la verifica
 const buttonMails = document.getElementById('button-emails');
 
 buttonMails.addEventListener('click', function(){
-  emailUser = document.getElementById('email-user-id').value;
   
-  console.log(emailUser)
+  emailUser = document.getElementById('email-user-id').value;
+  if (emailRegistered.includes(emailUser)) {
 
+    // 6. Se è presente: lo lascio entrare e stampo il relativo messaggio
+    message = 'Puoi entrare';
+    emailVerify = true;
+  
+  } else {
+  
+    // 7. Se non è presente: non lo lascio entrare e stampo il relativo messaggio
+    message = 'Non sei stato invitato';
+    emailVerify = false;
+  }
+
+  outputMails.innerHTML = message;
 });
 
-
-
-
-if (emailRegistered.includes(emailUser)) {
-
-  // 5. Se è presente: lo lascio entrare e stampo il relativo messaggio
-  message = 'Puoi entrare';
-  emailVerify = true;
-
-} else {
-
-  // 6. Se non è presente: non lo lascio entrare e stampo il relativo messaggio
-  message = 'Non sei stato invitato';
-  
-}
-
-console.log(message)
-
-
-console.log('-------- DIVISIONE DA RIMUOVERE --------')
 
 
 /****************
@@ -64,7 +57,7 @@ buttonDices.addEventListener('click', function(){
   numUser = Math.ceil(Math.random() * 6 );
 
   // 4. Verifico i due numeri estratti
-  // 5. se i numeri estratti sono uguali tira di nuovo
+  // 5. Se i numeri estratti sono uguali tira di nuovo
   if (numPC === numUser) {
 
     numPC = Math.ceil(Math.random() * 6 );

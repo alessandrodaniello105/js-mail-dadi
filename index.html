@@ -13,17 +13,28 @@
 </head>
 <body>
   
-  <div class="container my-5">
+  <div class="container text-center my-5 py-3 bg-secondary">
 
-    <h1 class="text-center">Controllo Mail</h1>
+    <h1 class="mb-3">Controllo Mail</h1>
 
-    <div class="col-2">
-
+    <!-- INPUT FORM -->
+    <div class="col-2 offset-5 bg-secondary-subtle rounded p-3 text-center">
+      
       <label class="form-label" for="email-user-id">Email:</label>
       <input class="form-control " type="email" name="email-user" id="email-user-id" placeholder="Scrivi qui la tua e-mail">
-
+      
       <button type="submit" class="btn btn-outline-primary my-3" id="button-emails"> Submit</button>
+      
+    </div>
+    <!-- /INPUT FORM -->
+    
+    <!-- OUTPUT MESSAGE -->
+    <div class="col fw-bold fs-3 my-3" id="output-mails"></div>
+    <!-- /OUTPUT MESSAGE -->
 
+    <div class="col shadow bg-white" id="hint">
+      <h4>Indizio: Clicca e trascina il cursore all'interno di questo box</h4>
+      <span class="text-white">Prova ad inserire tutor@boolean.it</span>
     </div>
 
 
