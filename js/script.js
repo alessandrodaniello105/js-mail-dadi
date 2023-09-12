@@ -3,7 +3,7 @@
 ****************/
 // 1. Creo un array(lista) delle email registrate
 
-const emailRegistered = ['pippo', 'pluto', 'paperino'];
+const emailRegistered = ['tutor@boolean.it'];
 
 // 2. Creo un input dove chiedo la mail dell'utente
 
@@ -15,7 +15,18 @@ let emailUser, message;
 
 let emailVerify = false;
 
-emailUser = 'pippo' //es. email inclusa in lista
+// 4bis. Creo un pulsante che mi faccia partire la verifica
+const buttonMails = document.getElementById('button-emails');
+
+buttonMails.addEventListener('click', function(){
+  emailUser = document.getElementById('email-user-id').value;
+  
+  console.log(emailUser)
+
+});
+
+
+
 
 if (emailRegistered.includes(emailUser)) {
 
